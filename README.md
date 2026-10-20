@@ -2,13 +2,9 @@
 
 ## Sobre o projeto
 
-Este projeto tem como objetivo desenvolver uma aplicação
-web dedicada à divulgação das contribuições de mulheres
-brasileiras para a ciência.
+Este projeto tem como objetivo desenvolver uma aplicação web dedicada à divulgação das contribuições de mulheres brasileiras para a ciência.
 
-A plataforma será estruturada como um catálogo de
-cientistas, permitindo consultar informações sobre suas
-trajetórias e contribuições científicas.
+A plataforma será estruturada como um catálogo de cientistas, permitindo consultar informações sobre suas trajetórias e contribuições científicas.
 
 ## Contexto acadêmico
 
@@ -28,14 +24,16 @@ Projeto interdisciplinar que integra as disciplinas:
 
 ## Tecnologias
 
-A definir.
+O projeto utiliza as seguintes tecnologias:
+
+- **Frontend:** JavaScript e React
+- **Backend:** Node.js
+- **Banco de dados:** MySQL
 
 ## Documentação
 
-Os documentos referentes ao planejamento, à modelagem
-do banco de dados e aos requisitos do sistema serão
-disponibilizados no diretório `docs/`.
+Os documentos referentes ao planejamento, à modelagem do banco de dados e aos requisitos do sistema estarão disponíveis no diretório `docs/` em breve.
 
 ## Status
 
-Em fase de planejamento e definição dos requisitos.
+Em fase de desenvolvimento.
