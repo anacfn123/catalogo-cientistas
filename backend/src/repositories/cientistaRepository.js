@@ -4,7 +4,7 @@ const pool = require('../config/db');
 
 async function listarAprovadas({ busca, areaId }) {
   let sql = `
-    SELECT c.id_cientista, c.nome, c.ano_inicio_atuacao, c.ano_fim_atuacao,
+    SELECT c.id_cientista, c.nome, c.biografia, c.ano_inicio_atuacao, c.ano_fim_atuacao,
            GROUP_CONCAT(a.nome_area ORDER BY a.nome_area SEPARATOR '|') AS areas
     FROM cientista c
     LEFT JOIN cientista_has_area ca ON ca.cientista_id_cientista = c.id_cientista

@@ -6,6 +6,7 @@ function cientistaResumoDto(linha) {
   return {
     id: linha.id_cientista,
     nome: linha.nome,
+    biografia: linha.biografia,
     anoInicio: linha.ano_inicio_atuacao,
     anoFim: linha.ano_fim_atuacao,
     areas: linha.areas ? linha.areas.split('|') : [],
