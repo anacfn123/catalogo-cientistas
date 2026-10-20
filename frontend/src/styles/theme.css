@@ -27,7 +27,7 @@ a:hover { color: var(--rosa); }
 .apoio { color: var(--apoio); }
 :focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
 
-/* Cabeçalho */
+
 .navbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 5%; border-bottom: 1px solid var(--borda); }
 .logo { display: flex; align-items: center; gap: 10px; font: 700 1.45rem var(--fonte-titulo); color: var(--azul); }
 .nav-links { display: flex; align-items: center; gap: 28px; }
@@ -35,11 +35,11 @@ a:hover { color: var(--rosa); }
 .nav-links a.ativo { color: var(--azul); border-color: var(--amarelo); }
 .nav-links .btn { padding: 8px 18px; }
 
-/* Início */
+
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 48px; align-items: center; padding: 48px 5% 32px; }
 .hero > div:first-child { display: flex; flex-direction: column; gap: 20px; max-width: 620px; }
 
-/* Botões (pílula) */
+
 .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border: 0; border-radius: 999px; font: 700 15px var(--fonte-texto); cursor: pointer; transition: transform .15s; }
 .btn:hover { transform: translateY(-2px); }
 .btn-primario { background: var(--azul); color: #fff; }
@@ -48,25 +48,25 @@ a:hover { color: var(--rosa); }
 .btn-primario:hover, .btn-destaque:hover { color: #fff; }
 .btn-secundario:hover { color: var(--tinta); }
 
-/* Campo */
+
 .campo { width: 100%; padding: 14px 18px; border: 1.5px solid var(--borda); border-radius: 999px; background: #fff; color: var(--tinta); font: inherit; }
 .campo:focus { border-color: var(--azul); outline: none; }
 textarea.campo { border-radius: 16px; }
 
-/* Cor da área: use no card, ex.: className="card cor-rosa" */
+
 .cor-azul { --cor: var(--azul); }
 .cor-rosa { --cor: var(--rosa); }
 .cor-verde { --cor: var(--verde); }
 .cor-laranja { --cor: var(--laranja); }
 
-/* Card e avatar em blob */
+
 .card { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 12px; padding: 22px; background: #fff; border: 1px solid var(--borda); border-radius: var(--raio-card); }
 .card::before { content: ""; position: absolute; top: -34px; right: -34px; width: 110px; height: 110px; border-radius: 50%; background: var(--cor, var(--azul)); opacity: .16; }
 .card:hover { border-color: var(--cor, var(--azul)); }
 .card-topo { border-top: 6px solid var(--cor, var(--azul)); }
 .avatar { display: flex; align-items: center; justify-content: center; width: 58px; height: 58px; border-radius: 58% 42% 55% 45% / 50% 55% 45% 50%; background: var(--cor, var(--azul)); color: #fff; font-weight: 700; }
 
-/* Tags e filtros */
+
 .tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; }
 .tag-azul { background: #E1EAF7; color: var(--azul); }
 .tag-rosa { background: #FBE0EA; color: var(--rosa); }
@@ -76,12 +76,12 @@ textarea.campo { border-radius: 16px; }
 .filtro { padding: 7px 16px; border: 1.5px solid var(--borda); border-radius: 999px; background: #fff; color: var(--tinta); font: 700 13px var(--fonte-texto); cursor: pointer; }
 .filtro.ativo { background: var(--azul); border-color: var(--azul); color: #fff; }
 
-/* Grade, perfil e rodapé */
+
 .grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; padding: 0 5% 56px; }
 .perfil { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 44px; align-items: center; padding: 44px 5% 32px; }
 .footer { display: flex; justify-content: space-between; gap: 16px; padding: 18px 5%; background: var(--azul); color: var(--creme); font-size: 13px; }
 
-/* Acréscimos */
+
 .pagina { display: flex; flex-direction: column; gap: 16px; padding: 40px 5% 24px; }
 .card > * { position: relative; }
 .card-cabecalho { display: flex; align-items: center; gap: 14px; }
