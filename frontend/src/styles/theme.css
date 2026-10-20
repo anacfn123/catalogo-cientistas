@@ -93,6 +93,7 @@ label { font-weight: 700; font-size: 14px; }
 .perfil .avatar { width: 280px; height: 300px; font-size: 4rem; border-radius: 45% 55% 40% 60% / 55% 45% 55% 45%; }
 .perfil-info { display: flex; flex-direction: column; gap: 12px; }
 .card ul { margin: 0; padding-left: 20px; }
+.resumo { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
 @media (max-width: 768px) {
   .hero, .perfil, .grade { grid-template-columns: 1fr; }
