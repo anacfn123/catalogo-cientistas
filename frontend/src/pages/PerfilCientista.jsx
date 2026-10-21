@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router';
 import { buscarPorId, corDaArea } from '../services/cientistasService';
 import { iniciais } from '../utils/iniciais';
 

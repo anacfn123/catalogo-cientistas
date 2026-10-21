@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { sugerir } from '../services/cientistasService';
 import { Paisagem } from '../components/Decoracao';
 

@@ -1,14 +1,15 @@
-import { Routes, Route } from 'react-router';
+import Header from './components/Header';
+import Footer from './components/Footer'
+import AppRoutes from './routes/AppRoutes'
 
-function App() {
+export default function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={<h1>Catálogo de Cientistas</h1>}
-      />
-    </Routes>
+    <>
+      <Header />
+      <main>
+        <AppRoutes />
+      </main>
+      <Footer />
+    </>
   );
 }
-
-export default App;

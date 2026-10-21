@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router';
 import { listar, listarAreas } from '../services/cientistasService';
 import CampoBusca from '../components/CampoBusca';
 import CientistaCard from '../components/CientistaCard';
