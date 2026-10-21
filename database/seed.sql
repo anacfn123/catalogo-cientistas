@@ -1,8 +1,3 @@
--- Dados de EXEMPLO para testar o sistema.
--- Anos de início/fim de atuação em registros históricos são aproximações para demonstração.
--- Revisar e validar dados biográficos antes da publicação em produção.
--- Rodar DEPOIS do schema.sql.
--- Conferir/ajustar os textos antes da apresentação.
 USE mydb;
 SET NAMES utf8mb4; -- garante acentos corretos
 
