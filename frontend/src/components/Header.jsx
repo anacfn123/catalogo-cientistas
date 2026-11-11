@@ -5,6 +5,7 @@ const links = [
   { to: '/', texto: 'Início' },
   { to: '/cientistas', texto: 'Cientistas' },
   { to: '/sobre', texto: 'Sobre' },
+  { to: '/admin', texto: 'Admin' },
 ];
 
 export default function Header() {

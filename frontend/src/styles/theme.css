@@ -98,3 +98,33 @@ label { font-weight: 700; font-size: 14px; }
   .hero, .perfil, .grade { grid-template-columns: 1fr; }
   .navbar, .footer { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
+/* Painel administrativo e mensagens de estado */
+.admin-pagina { max-width: 1250px; margin: 0 auto; padding-bottom: 70px; }
+.admin-cabecalho { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.admin-navegacao { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.admin-login { max-width: 500px; }
+.admin-form { max-width: 850px; gap: 18px; }
+.admin-anos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.admin-areas { border: 1px solid var(--borda); border-radius: 16px; padding: 15px; }
+.admin-areas legend { font-weight: 700; padding: 0 6px; }
+.admin-opcao { display: inline-flex; align-items: center; gap: 7px; background: var(--creme); padding: 6px 12px; border-radius: 12px; cursor: pointer; }
+.admin-opcao input { accent-color: var(--azul); }
+.admin-lista { display: flex; flex-direction: column; gap: 14px; }
+.admin-item { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 22px; }
+.admin-item-texto { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; overflow-wrap: anywhere; }
+.admin-item .acoes { flex-shrink: 0; }
+.btn-perigo { background: #9b2448; color: #fff; }
+.btn-perigo:hover { color: #fff; }
+.btn:disabled, .filtro:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+.aviso-erro { padding: 12px 16px; border-left: 4px solid var(--rosa); background: #FBE0EA; border-radius: 8px; }
+.aviso-sucesso { padding: 12px 16px; border-left: 4px solid var(--verde); background: #DDF0E4; border-radius: 8px; }
+.contador-resultados { padding: 0 5% 20px; color: var(--apoio); }
+.resumo { overflow-wrap: anywhere; }
+@media (max-width: 768px) {
+  .nav-links { flex-wrap: wrap; gap: 12px; }
+  .busca { flex-wrap: wrap; }
+  .admin-cabecalho, .admin-item { flex-direction: column; }
+  .admin-anos { grid-template-columns: 1fr; }
+  .admin-item .acoes { flex-shrink: 1; }
+  .perfil .avatar { width: 220px; height: 220px; }
+}

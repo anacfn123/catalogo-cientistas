@@ -5,7 +5,7 @@ import { iniciais } from '../utils/iniciais';
 export default function CientistaCard({ cientista }) {
 
   const { id, nome, areas, biografia } = cientista;
-  const cor = corDaArea(areas[0]);
+  const cor = corDaArea(areas?.[0]);
 
   return (
     <article className={`card cor-${cor}`}>
@@ -13,11 +13,11 @@ export default function CientistaCard({ cientista }) {
         <div className="avatar">{iniciais(nome)}</div>
         <div>
           <h3>{nome}</h3>
-          <p className="apoio">{areas.join(', ')}</p>
+          <p className="apoio">{areas.length ? areas.join(', ') : 'Área não informada'}</p>
         </div>
       </div>
 
-      <p className="resumo">{biografia}</p>
+      <p className="resumo">{biografia || 'Conheça a trajetória desta cientista no perfil completo.'}</p>
 
       <div className="tags">
         {areas.map((area) => (

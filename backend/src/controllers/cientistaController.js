@@ -1,20 +1,40 @@
-// Controller = recebe a requisição HTTP, chama o service e devolve a resposta.
 const service = require('../services/cientistaService');
 
 async function listar(req, res) {
-  const { busca, area } = req.query; // ex.: /api/cientistas?busca=maria&area=2
-  const cientistas = await service.listar({ busca, areaId: area });
-  res.json(cientistas);
+  const { busca, area } = req.query;
+  res.json(await service.listar({ busca, areaId: area }));
 }
 
 async function detalhar(req, res) {
-  const cientista = await service.detalhar(Number(req.params.id));
-  res.json(cientista);
+  res.json(await service.detalhar(req.params.id));
 }
 
 async function sugerir(req, res) {
-  const resultado = await service.sugerir(req.body);
-  res.status(201).json(resultado);
+  res.status(201).json(await service.sugerir(req.body));
 }
 
-module.exports = { listar, detalhar, sugerir };
+async function listarAdmin(req, res) {
+  res.json(await service.listarAdmin(req.query.status));
+}
+
+async function listarSugestoes(req, res) {
+  res.json(await service.listarAdmin('pendente'));
+}
+
+async function criar(req, res) {
+  res.status(201).json(await service.criar(req.body));
+}
+
+async function atualizar(req, res) {
+  res.json(await service.atualizar(req.params.id, req.body));
+}
+
+async function excluir(req, res) {
+  res.json(await service.excluir(req.params.id));
+}
+
+async function revisar(req, res) {
+  res.json(await service.revisarSugestao(req.params.id, req.body?.status));
+}
+
+module.exports = { listar, detalhar, sugerir, listarAdmin, listarSugestoes, criar, atualizar, excluir, revisar };
