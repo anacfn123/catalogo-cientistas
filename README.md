@@ -19,7 +19,6 @@ Aplicação web acadêmica dedicada à divulgação da trajetória e das contrib
 - Formulário público de sugestão; sugestões ficam `pendente` até moderação.
 - Painel `/admin` com cadastro, edição, exclusão e aprovação/recusa de sugestões.
 - Rotas administrativas protegidas por token, validações de entrada e transações SQL.
-- Testes automatizados de regras backend e contratos HTTP do frontend.
 
 ## Requisitos
 
@@ -53,32 +52,6 @@ Aplicação web acadêmica dedicada à divulgação da trajetória e das contrib
 
 5. Acesse a URL exibida pelo Vite, normalmente `http://localhost:5173`. O painel fica em `/admin`. Insira nele o token definido em **`backend/.env`** (não exponha esse token em `frontend/.env`).
 
-## Testes
-
-Testes unitários/contratos sem banco nem serviços externos:
-
-```bash
-cd backend && npm test
-cd ../frontend && npm test
-```
-
-Com dependências instaladas, valide também:
-
-```bash
-cd frontend
-npm run lint
-npm run build
-```
-
-Com banco e backend ligados, rode o **smoke test E2E real da API** (cria e remove registros temporários — usar **somente em banco de teste**):
-
-```bash
-cd backend
-node --env-file=.env test/fluxoE2E.mjs
-```
-
-Para verificar o site visualmente, siga [o roteiro manual](docs/ROTEIRO_TESTE_MANUAL.md).
-
 ## API
 
 - `GET /api/health`: verifica banco.
@@ -97,11 +70,3 @@ Para verificar o site visualmente, siga [o roteiro manual](docs/ROTEIRO_TESTE_MA
 Rotas `/api/admin/*` exigem `Authorization: Bearer <ADMIN_TOKEN>`.
 
 **Observação de segurança:** o uso de token compartilhado é uma solução simples para demonstração acadêmica, e não um sistema de autenticação de produção. Para um deploy público, implementar contas, senhas seguras, rate limiting e auditoria antes de abrir o painel.
-
-## Documentação do ponto de controle
-
-- [Relatório de implementação, evidências e pendências](docs/ENTREGA_PONTO_DE_CONTROLE.md)
-- [Roteiro de testes real de ponta a ponta](docs/ROTEIRO_TESTE_MANUAL.md)
-- [Texto pronto para o card do Trello](docs/RESUMO_PARA_TRELLO.md)
-
-**Status de validação:** 23 testes automatizados de lógica/contrato passaram. Ainda é necessário executar o sistema com MySQL real, concluir os testes no navegador, verificar o feedback dos professores e integrar as alterações ao Git oficial. Consulte o relatório antes de marcar o card como Done.
