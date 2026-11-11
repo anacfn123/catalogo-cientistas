@@ -1,11 +1,9 @@
-// DTO = formato dos dados que a API devolve para o frontend.
-// Aqui convertemos a linha do banco (nomes de coluna) para um objeto limpo,
-// e escondemos dados internos (ex.: e-mail de quem sugeriu).
-
+// DTO: evita expor dados de solicitantes nas rotas públicas.
 function cientistaResumoDto(linha) {
   return {
     id: linha.id_cientista,
     nome: linha.nome,
+    biografia: linha.biografia,
     anoInicio: linha.ano_inicio_atuacao,
     anoFim: linha.ano_fim_atuacao,
     areas: linha.areas ? linha.areas.split('|') : [],
@@ -32,4 +30,18 @@ function cientistaDetalheDto(linha, areas, premios, publicacoes, contribuicoes) 
   };
 }
 
-module.exports = { cientistaResumoDto, cientistaDetalheDto };
+function cientistaAdminDto(linha) {
+  return {
+    id: linha.id_cientista,
+    nome: linha.nome,
+    biografia: linha.biografia,
+    anoInicio: linha.ano_inicio_atuacao,
+    anoFim: linha.ano_fim_atuacao,
+    areas: linha.areas_ids ? linha.areas_ids.split(',').map(Number) : [],
+    nomeSolicitante: linha.nome_solicitante,
+    emailSolicitante: linha.email_solicitante,
+    status: linha.status,
+  };
+}
+
+module.exports = { cientistaResumoDto, cientistaDetalheDto, cientistaAdminDto };
