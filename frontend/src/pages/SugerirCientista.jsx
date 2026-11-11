@@ -38,7 +38,7 @@ export default function SugerirCientista() {
         <form className="card" onSubmit={enviar}>
           <div className="campo-grupo">
             <label htmlFor="nome">Nome da cientista</label>
-            <input id="nome" name="nome" className="campo" value={dados.nome} onChange={mudar} required />
+            <input id="nome" name="nome" className="campo" maxLength={150} value={dados.nome} onChange={mudar} required />
           </div>
 
           <div className="campo-grupo">
@@ -48,17 +48,17 @@ export default function SugerirCientista() {
 
           <div className="campo-grupo">
             <label htmlFor="anoInicio">Ano em que começou a atuar</label>
-            <input id="anoInicio" name="anoInicio" type="number" className="campo" value={dados.anoInicio} onChange={mudar} required />
+            <input id="anoInicio" name="anoInicio" type="number" min="1901" max={new Date().getFullYear()} className="campo" value={dados.anoInicio} onChange={mudar} required />
           </div>
 
           <div className="campo-grupo">
             <label htmlFor="nomeSolicitante">Seu nome</label>
-            <input id="nomeSolicitante" name="nomeSolicitante" className="campo" value={dados.nomeSolicitante} onChange={mudar} required />
+            <input id="nomeSolicitante" name="nomeSolicitante" className="campo" maxLength={150} value={dados.nomeSolicitante} onChange={mudar} required />
           </div>
 
           <div className="campo-grupo">
             <label htmlFor="emailSolicitante">Seu e-mail</label>
-            <input id="emailSolicitante" name="emailSolicitante" type="email" className="campo" value={dados.emailSolicitante} onChange={mudar} required />
+            <input id="emailSolicitante" name="emailSolicitante" type="email" className="campo" maxLength={150} value={dados.emailSolicitante} onChange={mudar} required />
           </div>
 
           <div className="acoes">
