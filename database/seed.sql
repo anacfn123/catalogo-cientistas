@@ -1,4 +1,5 @@
 USE mydb;
+SET NAMES utf8mb4;
 
 -- Áreas de atuação
 INSERT INTO area (id_area, nome_area) VALUES
